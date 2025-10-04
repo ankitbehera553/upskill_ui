@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { CreateUser, getUser } from '../userServices/createUser';
 import './userLogin.css';
 
-export function UserLogin() {
+export function UserLogin({ setTeacherEmail, setStudentDept, setStudentEmail }) {
     const containerRef = useRef(null);
     const signInButtonRef = useRef(null);
     const signUpButtonRef = useRef(null);
@@ -69,7 +69,13 @@ export function UserLogin() {
                 setEmail("");
                 setPassword("");
                 setDepartment("cse");
-                navigate('/userDashBoard');
+                if (role === 'Lecture') {
+                    // setTeacherEmail(data.email);
+                    navigate('/teacherDashBoard');
+                }
+                else {
+                    navigate('/userDashBoard');
+                }
             } else {
                 alert("Failed to create user: " + error);
             }
@@ -80,8 +86,11 @@ export function UserLogin() {
             const { success, data, error } = await getUser(newUser);
 
             if (success && data.role === "Student") {
+                setStudentDept(data.department);
+                setStudentEmail(data.email);
                 navigate('/userDashBoard');
             } else if (success && data.role === "Lecture") {
+                setTeacherEmail(data.email);
                 navigate('/teacherDashBoard');
             } else {
                 alert("Failed to login: " + error);
@@ -108,7 +117,7 @@ export function UserLogin() {
                                     <input type="text" placeholder="Firstname" value={firstname} onChange={(e) => setFirstname(e.target.value)} />
                                     <input type="text" placeholder="Lastname" value={lastName} onChange={(e) => setLastname(e.target.value)} />
 
-                                    {role == 'Student' && (
+                                    {role === 'Student' && (
                                         <>
                                             <select name="Departemnt" id="Departemnt" value={department} onChange={(e) => setDepartment(e.target.value)}>
                                                 <option value="csit">CS/IT</option>

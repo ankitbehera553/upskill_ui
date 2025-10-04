@@ -1,0 +1,109 @@
+.addExamLayout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.addExamHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.addExamHeader h2 {
+  color: #374151;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.backBtn,
+.saveBtn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.backBtn {
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.backBtn:hover {
+  background-color: #f3f4f6;
+}
+
+.saveBtn {
+  background-color: #FF4B2B;
+  color: white;
+  border: none;
+  margin-left: 12px;
+}
+
+.saveBtn:hover {
+  background-color: #fb310e;
+}
+
+.addExamForm {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.examDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.examDetails select,
+.examDetails input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.examDetails select:focus,
+.examDetails input:focus {
+  outline: none;
+  border-color: #FF4B2B;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.examDetails select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+/* Placeholder styling */
+.examDetails input::placeholder {
+  color: #9ca3af;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .addExamHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .examDetails {
+    grid-template-columns: 1fr;
+  }
+}

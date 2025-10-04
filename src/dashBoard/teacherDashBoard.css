@@ -1,5 +1,17 @@
 .teacherMainLayout{
     height: 100%;
     width: 100%;
-    background-color:bisque ;
+    background-color:rgb(251, 251, 250) ;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+.cardLayout{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    overflow: auto;
+    justify-content: flex-start;
 }

@@ -1,0 +1,67 @@
+/* Layout wrapper */
+.SubmittedLayout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page header */
+#header {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Card container (flex grid) */
+.submitCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    overflow: auto;
+    justify-content: flex-start;
+}
+
+/* Individual card */
+.submitCard > div {
+    background: #fe5757;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    width: 280px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Card hover effect */
+.submitCard > div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Text inside card */
+.submitCard p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Highlight name */
+.submitCard p:first-child {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+}
+
+/* Empty state */
+.submitCard p:only-child {
+    font-size: 18px;
+    font-style: italic;
+    color: #888;
+}

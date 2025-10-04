@@ -1,14 +1,13 @@
 .card{
     display: flex;
     flex-direction: column;
-    justify-self: start;
     justify-content: space-between;
     align-items: center;
     box-shadow: 2px 2px 15px rgb(123 121 121 / 23%);
     height: 100px;
-    width: 100%;
-    flex: 0 0 24%;
+    flex: 0 0 23%;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 .card:hover{
     background: #FF416C;

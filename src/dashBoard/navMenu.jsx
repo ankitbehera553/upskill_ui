@@ -25,7 +25,7 @@ export function NavMenu({ children }) {
                         Profile
                     </div>
                 </div>
-                <main style={{heigth: '100%', width:'100%'}}>{children}</main>
+                <main>{children}</main>
             </div>
 
         </>

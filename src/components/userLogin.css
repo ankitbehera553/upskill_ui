@@ -4,7 +4,6 @@
 	box-sizing: border-box;
 }
 
-
 h1 {
 	font-weight: bold;
 	margin: 0;
@@ -257,4 +256,5 @@ footer a {
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	background: linear-gradient(to right, #FF416C, #FF4B2B);
 }

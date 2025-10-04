@@ -1,0 +1,131 @@
+/* General page styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  overflow: auto;
+}
+
+/* Header section */
+.exam-header {
+  background: linear-gradient(to right, #FF416C, #FF4B2B);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.exam-header h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.exam-header p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+/* User details section */
+.user-details {
+  max-width: 900px;
+  margin: 20px auto;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.user-details input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.user-details input:focus {
+  outline: none;
+  border-color: #4e73df;
+  box-shadow: 0 0 6px rgba(78, 115, 223, 0.4);
+}
+
+/* Questions section */
+.exam-questions {
+  background: white;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.exam-questions h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #4e73df;
+}
+
+.exam-questions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exam-questions li {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exam-questions li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+.exam-questions input[type="text"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.exam-questions input[type="text"]:focus {
+  border-color: #1cc88a;
+  box-shadow: 0 0 5px rgba(28, 200, 138, 0.4);
+  outline: none;
+}
+
+/* Submit button */
+.submitAnswer {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #FF416C, #FF4B2B);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.submitAnswer:hover {
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.submitAnswer:active {
+  transform: scale(0.97);
+}
